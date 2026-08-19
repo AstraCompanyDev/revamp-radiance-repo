@@ -519,6 +519,14 @@ function Index() {
 
             <div className="mt-14 grid gap-8 md:grid-cols-2 md:items-center">
               <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
+                <img
+                  src={peopleVote}
+                  alt="Community members raising their hands to vote together"
+                  loading="lazy"
+                  width={1200}
+                  height={912}
+                  className="h-64 w-full rounded-3xl border border-border object-cover"
+                />
                 <p>
                   For decades, business served only its shareholders. Stakeholder capitalism is the
                   alternative — a business responsible to everyone it affects.
@@ -529,6 +537,7 @@ function Index() {
                   transparent, community-governed, automatic.
                 </p>
               </div>
+
 
               <div className="glass-panel rounded-3xl p-8">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
