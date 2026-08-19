@@ -26,7 +26,7 @@ import learningFoundation from "@/assets/learning-foundation.jpg.asset.json";
 import uTopiaWallet from "@/assets/u-topia-wallet.png.asset.json";
 import stakeholderGathering from "@/assets/stakeholder-gathering.jpg.asset.json";
 import youEvent from "@/assets/you-event.jpg.asset.json";
-import uCenterSpeaker from "@/assets/u-center-speaker.jpg.asset.json";
+import uCenterSpeaker from "@/assets/u-center-speaker-v2.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
