@@ -413,20 +413,6 @@ function Index() {
                     key={card.title}
                     className="glass-panel group overflow-hidden rounded-3xl transition-transform hover:-translate-y-1"
                   >
-                    <div className="relative">
-                      <img
-                        src={card.image}
-                        alt={card.alt}
-                        loading="lazy"
-                        width={1200}
-                        height={912}
-                        className="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                      <div
-                        aria-hidden="true"
-                        className="absolute inset-0 bg-gradient-to-t from-card/90 via-card/10 to-transparent"
-                      />
-                    </div>
                     <div className="relative p-7 pt-5">
                       <span className="bg-brand-gradient grid size-11 place-items-center rounded-xl text-primary-foreground">
                         <Icon className="size-5" />
