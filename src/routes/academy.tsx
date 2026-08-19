@@ -31,6 +31,7 @@ import daoAudience from "@/assets/dao-audience.jpg.asset.json";
 import logoDark from "@/assets/logo-dark.png.asset.json";
 import futureOfMoneyThumb from "@/assets/future-of-money-thumb.jpg.asset.json";
 import aiForBusinessThumb from "@/assets/ai-for-business-thumb.jpg.asset.json";
+import buildYourFirstAIAgentThumb from "@/assets/build-your-first-ai-agent-thumb.jpg.asset.json";
 
 export const Route = createFileRoute("/academy")({
   head: () => ({
@@ -121,7 +122,7 @@ const RAILS = [
     items: [
       { title: "The Future of Money", caption: "Banking Continues to Churn", image: futureOfMoneyThumb.url },
       { title: "AI for Business: Build Your AI Workforce", caption: "Support Teams and Trends", image: aiForBusinessThumb.url },
-      { title: "Build Your First AI Agent", caption: "Managing Sessions in Scale Initiatives", image: peopleRules },
+      { title: "Build Your First AI Agent", caption: "Managing Sessions in Scale Initiatives", image: buildYourFirstAIAgentThumb.url },
     ],
   },
   {
