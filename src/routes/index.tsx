@@ -696,13 +696,7 @@ function Index() {
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-3">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3">
-              <span className="bg-brand-gradient grid size-8 place-items-center rounded-full font-display text-sm font-bold text-primary-foreground">
-                u
-              </span>
-              <span className="font-display text-lg font-bold tracking-tight">u.center</span>
-              <span className="rounded-full border border-border px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
-                Beta
-              </span>
+              <img src={logoDark.url} alt="u.center Beta" className="h-8 w-auto dark:invert" />
             </div>
             <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
               The learning home of the U-TOPIA ecosystem, where understanding comes first, and
