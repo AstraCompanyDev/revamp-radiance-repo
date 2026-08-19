@@ -17,6 +17,10 @@ import {
 } from "lucide-react";
 
 import heroAurora from "@/assets/hero-aurora-light.jpg";
+import peopleCollab from "@/assets/people-collab.jpg";
+import peopleVote from "@/assets/people-vote.jpg";
+import peopleLearn from "@/assets/people-learn.jpg";
+import peopleRules from "@/assets/people-rules.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
