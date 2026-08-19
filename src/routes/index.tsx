@@ -408,40 +408,42 @@ function Index() {
             className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background/90"
           />
           <div className="relative mx-auto max-w-6xl px-6 py-24">
-            <div className="flex flex-col items-center text-center">
-              <SectionBadge>Understanding the Foundation</SectionBadge>
-              <h2 className="mt-6 font-display text-4xl font-bold tracking-tight text-balance md:text-5xl">
-                What Is a <span className="text-brand-gradient">DAO?</span>
-              </h2>
-              <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground text-pretty">
-                A Decentralized Autonomous Organization — a community that runs itself by shared,
-                transparent rules.
-              </p>
-            </div>
+            <div className="glass-panel rounded-[2.5rem] border border-border/60 bg-card/70 p-8 shadow-2xl backdrop-blur-2xl md:p-14">
+              <div className="flex flex-col items-center text-center">
+                <SectionBadge>Understanding the Foundation</SectionBadge>
+                <h2 className="mt-6 font-display text-4xl font-bold tracking-tight text-balance md:text-5xl">
+                  What Is a <span className="text-brand-gradient">DAO?</span>
+                </h2>
+                <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground text-pretty">
+                  A Decentralized Autonomous Organization — a community that runs itself by shared,
+                  transparent rules.
+                </p>
+              </div>
 
-            <div className="mt-14 grid gap-6 md:grid-cols-3">
-              {DAO_CARDS.map((card) => {
-                const Icon = card.icon;
-                return (
-                  <article
-                    key={card.title}
-                    className="glass-panel group overflow-hidden rounded-3xl transition-transform hover:-translate-y-1"
-                  >
-                    <div className="relative p-7 pt-5">
-                      <span className="bg-brand-gradient grid size-11 place-items-center rounded-xl text-primary-foreground">
-                        <Icon className="size-5" />
-                      </span>
-                      <h3 className="mt-6 font-display text-xl font-bold tracking-tight">
-                        {card.title}
-                      </h3>
-                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                        {card.body}
-                      </p>
-                    </div>
-                  </article>
+              <div className="mt-14 grid gap-6 md:grid-cols-3">
+                {DAO_CARDS.map((card) => {
+                  const Icon = card.icon;
+                  return (
+                    <article
+                      key={card.title}
+                      className="glass-panel group overflow-hidden rounded-3xl transition-transform hover:-translate-y-1"
+                    >
+                      <div className="relative p-7 pt-5">
+                        <span className="bg-brand-gradient grid size-11 place-items-center rounded-xl text-primary-foreground">
+                          <Icon className="size-5" />
+                        </span>
+                        <h3 className="mt-6 font-display text-xl font-bold tracking-tight">
+                          {card.title}
+                        </h3>
+                        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                          {card.body}
+                        </p>
+                      </div>
+                    </article>
 
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>
