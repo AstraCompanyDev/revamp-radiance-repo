@@ -21,6 +21,7 @@ import peopleCollab from "@/assets/people-collab.jpg";
 import peopleVote from "@/assets/people-vote.jpg";
 import peopleLearn from "@/assets/people-learn.jpg";
 import peopleRules from "@/assets/people-rules.jpg";
+import comeLearnBg from "@/assets/come-learn-bg.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -631,38 +632,47 @@ function Index() {
 
         {/* Final CTA */}
         <section className="relative overflow-hidden border-t border-border">
+          <img
+            src={comeLearnBg.url}
+            alt=""
+            width={1920}
+            height={1080}
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 size-full object-cover opacity-[0.18]"
+          />
           <div
             aria-hidden="true"
-            className="absolute inset-0 opacity-70"
-            style={{ backgroundImage: "var(--gradient-brand)", filter: "blur(120px)" }}
+            className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background"
           />
-          <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 py-28 text-center">
-            <a
-              href="/"
-              className="glass-panel rounded-full px-6 py-2 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground transition-colors hover:text-foreground"
-            >
-              The Ecosystem
-            </a>
-            <h2 className="mt-8 font-display text-4xl font-bold leading-tight tracking-tight text-balance md:text-5xl">
-              Come <span className="text-brand-gradient">Learn.</span>
-              <br />
-              The River Will Do the Rest.
-            </h2>
-            <p className="mt-5 text-base text-muted-foreground text-pretty">
-              Join a community actively learning, building, and governing together.
-            </p>
-            <a
-              href="/"
-              className="bg-brand-gradient group mt-10 inline-flex items-center gap-3 rounded-full px-8 py-4 font-display text-base font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
-              style={{ boxShadow: "var(--shadow-glow)" }}
-            >
-              Sign In
-              <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-            </a>
-            <p className="mt-8 max-w-xl text-xs leading-relaxed text-muted-foreground">
-              Early access to U CENTER is opening in stages. Membership packages launch October
-              2026.
-            </p>
+          <div className="relative mx-auto max-w-3xl px-6 py-28">
+            <div className="glass-panel flex flex-col items-center rounded-[2rem] border border-border px-8 py-14 text-center shadow-sm md:px-14">
+              <a
+                href="/"
+                className="rounded-full border border-border px-6 py-2 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground transition-colors hover:text-foreground"
+              >
+                The Ecosystem
+              </a>
+              <h2 className="mt-8 font-display text-4xl font-bold leading-tight tracking-tight text-balance md:text-5xl">
+                Come <span className="text-brand-gradient">Learn.</span>
+                <br />
+                The River Will Do the Rest.
+              </h2>
+              <p className="mt-5 text-base text-muted-foreground text-pretty">
+                Join a community actively learning, building, and governing together.
+              </p>
+              <a
+                href="/"
+                className="bg-brand-gradient group mt-10 inline-flex items-center gap-3 rounded-full px-8 py-4 font-display text-base font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
+                style={{ boxShadow: "var(--shadow-glow)" }}
+              >
+                Sign In
+                <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+              </a>
+              <p className="mt-8 max-w-xl text-xs leading-relaxed text-muted-foreground">
+                Early access to U CENTER is opening in stages. Membership packages launch October
+                2026.
+              </p>
+            </div>
           </div>
         </section>
       </main>
