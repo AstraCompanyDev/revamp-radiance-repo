@@ -24,6 +24,7 @@ import peopleRules from "@/assets/people-rules.jpg";
 import comeLearnBg from "@/assets/come-learn-bg.png.asset.json";
 import learningFoundation from "@/assets/learning-foundation.jpg.asset.json";
 import uTopiaWallet from "@/assets/u-topia-wallet.png.asset.json";
+import stakeholderGathering from "@/assets/stakeholder-gathering.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -523,8 +524,8 @@ function Index() {
             <div className="mt-14 grid gap-8 md:grid-cols-2 md:items-center">
               <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
                 <img
-                  src={peopleVote}
-                  alt="Community members raising their hands to vote together"
+                  src={stakeholderGathering.url}
+                  alt="Community members gathering and networking at a U-TOPIA event"
                   loading="lazy"
                   width={1200}
                   height={912}
