@@ -27,6 +27,7 @@ import uTopiaWallet from "@/assets/u-topia-wallet.png.asset.json";
 import stakeholderGathering from "@/assets/stakeholder-gathering.jpg.asset.json";
 import youEvent from "@/assets/you-event.jpg.asset.json";
 import uCenterSpeaker from "@/assets/u-center-speaker-v2.png.asset.json";
+import daoAudience from "@/assets/dao-audience.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -392,8 +393,21 @@ function Index() {
         </section>
 
         {/* What is a DAO */}
-        <section className="border-y border-border bg-secondary/40">
-          <div className="mx-auto max-w-6xl px-6 py-24">
+        <section className="relative overflow-hidden border-y border-border">
+          <img
+            src={daoAudience.url}
+            alt=""
+            width={1920}
+            height={1280}
+            aria-hidden="true"
+            loading="lazy"
+            className="pointer-events-none absolute inset-0 size-full object-cover opacity-30"
+          />
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background/90"
+          />
+          <div className="relative mx-auto max-w-6xl px-6 py-24">
             <div className="flex flex-col items-center text-center">
               <SectionBadge>Understanding the Foundation</SectionBadge>
               <h2 className="mt-6 font-display text-4xl font-bold tracking-tight text-balance md:text-5xl">
