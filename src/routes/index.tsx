@@ -339,28 +339,47 @@ function Index() {
               return (
                 <article
                   key={item.title}
-                  className={`glass-panel relative overflow-hidden rounded-3xl p-7 ${
-                    item.featured ? "md:-my-6 md:p-9" : ""
+                  className={`glass-panel relative overflow-hidden rounded-3xl ${
+                    item.featured ? "md:-my-6" : ""
                   }`}
                   style={item.featured ? { boxShadow: "var(--shadow-glow)" } : undefined}
                 >
                   {item.featured && (
                     <div
                       aria-hidden="true"
-                      className="bg-brand-gradient absolute inset-x-0 top-0 h-1"
+                      className="bg-brand-gradient absolute inset-x-0 top-0 z-10 h-1"
                     />
                   )}
-                  <span className="bg-brand-gradient grid size-10 place-items-center rounded-xl text-primary-foreground">
-                    <Icon className="size-5" />
-                  </span>
-                  <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-                    {item.eyebrow}
-                  </p>
-                  <h3 className="mt-1 font-display text-2xl font-bold tracking-tight">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+                  <div className="relative">
+                    <img
+                      src={item.image}
+                      alt={item.alt}
+                      loading="lazy"
+                      width={1200}
+                      height={912}
+                      className={`w-full object-cover ${item.featured ? "h-56" : "h-44"}`}
+                    />
+                    <div
+                      aria-hidden="true"
+                      className="absolute inset-0 bg-gradient-to-t from-card/90 via-card/10 to-transparent"
+                    />
+                  </div>
+                  <div className={`relative ${item.featured ? "p-9 pt-5" : "p-7 pt-5"}`}>
+                    <span className="bg-brand-gradient grid size-10 place-items-center rounded-xl text-primary-foreground">
+                      <Icon className="size-5" />
+                    </span>
+                    <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+                      {item.eyebrow}
+                    </p>
+                    <h3 className="mt-1 font-display text-2xl font-bold tracking-tight">
+                      {item.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                      {item.body}
+                    </p>
+                  </div>
                 </article>
+
               );
             })}
           </div>
