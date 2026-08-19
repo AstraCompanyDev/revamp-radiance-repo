@@ -179,10 +179,9 @@ function Academy() {
           <Link to="/" className="flex items-center gap-2">
             <img
               src={logoDark.url}
-              alt="u.center"
+              alt="u.center Beta"
               className="h-7 w-auto dark:invert"
             />
-            <span className="text-xs font-medium text-muted-foreground">Beta</span>
           </Link>
 
           <div className="hidden flex-1 items-center md:flex">

@@ -232,12 +232,9 @@ function Index() {
           <a href="/" className="flex items-center gap-3">
             <img
               src={logoDark.url}
-              alt="u.center"
+              alt="u.center Beta"
               className="h-7 w-auto dark:invert"
             />
-            <span className="rounded-full border border-border px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
-              Beta
-            </span>
           </a>
 
           <ul className="hidden items-center gap-9 md:flex">
