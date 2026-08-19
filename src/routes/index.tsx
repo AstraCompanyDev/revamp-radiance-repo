@@ -251,7 +251,16 @@ function Index() {
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href="/academy"
+                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Academy
+              </a>
+            </li>
           </ul>
+
 
           <a
             href="/"
