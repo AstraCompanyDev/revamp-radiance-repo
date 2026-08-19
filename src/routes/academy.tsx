@@ -122,7 +122,7 @@ const RAILS = [
     items: [
       { title: "The Future of Money", caption: "Banking Continues to Churn", image: futureOfMoneyThumb.url },
       { title: "AI for Business: Build Your AI Workforce", caption: "Support Teams and Trends", image: aiForBusinessThumb.url },
-      { title: "Build Your First AI Agent", caption: "Managing Sessions in Scale Initiatives", image: peopleRules },
+      { title: "Build Your First AI Agent", caption: "Managing Sessions in Scale Initiatives", image: buildYourFirstAIAgentThumb.url },
     ],
   },
   {
