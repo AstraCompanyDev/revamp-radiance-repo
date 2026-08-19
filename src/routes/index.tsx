@@ -405,18 +405,35 @@ function Index() {
                 return (
                   <article
                     key={card.title}
-                    className="glass-panel group rounded-3xl p-7 transition-transform hover:-translate-y-1"
+                    className="glass-panel group overflow-hidden rounded-3xl transition-transform hover:-translate-y-1"
                   >
-                    <span className="bg-brand-gradient grid size-11 place-items-center rounded-xl text-primary-foreground">
-                      <Icon className="size-5" />
-                    </span>
-                    <h3 className="mt-6 font-display text-xl font-bold tracking-tight">
-                      {card.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                      {card.body}
-                    </p>
+                    <div className="relative">
+                      <img
+                        src={card.image}
+                        alt={card.alt}
+                        loading="lazy"
+                        width={1200}
+                        height={912}
+                        className="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div
+                        aria-hidden="true"
+                        className="absolute inset-0 bg-gradient-to-t from-card/90 via-card/10 to-transparent"
+                      />
+                    </div>
+                    <div className="relative p-7 pt-5">
+                      <span className="bg-brand-gradient grid size-11 place-items-center rounded-xl text-primary-foreground">
+                        <Icon className="size-5" />
+                      </span>
+                      <h3 className="mt-6 font-display text-xl font-bold tracking-tight">
+                        {card.title}
+                      </h3>
+                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                        {card.body}
+                      </p>
+                    </div>
                   </article>
+
                 );
               })}
             </div>
