@@ -23,6 +23,7 @@ import peopleLearn from "@/assets/people-learn.jpg";
 import peopleRules from "@/assets/people-rules.jpg";
 import comeLearnBg from "@/assets/come-learn-bg.png.asset.json";
 import learningFoundation from "@/assets/learning-foundation.jpg.asset.json";
+import uTopiaWallet from "@/assets/u-topia-wallet.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -59,8 +60,8 @@ const ECOSYSTEM = [
     title: "U-TOPIA",
     body: "The family of companies built on one belief: business should serve everyone it touches.",
     icon: Waves,
-    image: peopleRules,
-    alt: "Two colleagues shaking hands in a bright office",
+    image: uTopiaWallet,
+    alt: "U-TOPIA mobile wallet app showing spending balance and transactions",
   },
   {
     eyebrow: "The Learning Home",
