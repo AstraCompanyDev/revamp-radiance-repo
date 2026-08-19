@@ -22,6 +22,7 @@ import peopleVote from "@/assets/people-vote.jpg";
 import peopleLearn from "@/assets/people-learn.jpg";
 import peopleRules from "@/assets/people-rules.jpg";
 import comeLearnBg from "@/assets/come-learn-bg.png.asset.json";
+import learningFoundation from "@/assets/learning-foundation.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -600,8 +601,8 @@ function Index() {
           </div>
 
           <img
-            src={peopleLearn}
-            alt="A learner smiling while studying on a tablet"
+            src={learningFoundation.url}
+            alt="Maya Nicks, U-Topia AI Officer, presenting on stage"
             loading="lazy"
             width={1200}
             height={912}
