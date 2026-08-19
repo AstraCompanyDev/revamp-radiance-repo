@@ -157,3 +157,35 @@
     color: var(--color-foreground);
   }
 }
+
+@utility text-brand-gradient {
+  background-image: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-brand-gradient {
+  background-image: var(--gradient-brand);
+}
+
+@utility glass-panel {
+  background-color: color-mix(in oklab, var(--card) 55%, transparent);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border);
+}
+
+@utility animate-rise {
+  animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
