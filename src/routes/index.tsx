@@ -25,6 +25,7 @@ import comeLearnBg from "@/assets/come-learn-bg.png.asset.json";
 import learningFoundation from "@/assets/learning-foundation.jpg.asset.json";
 import uTopiaWallet from "@/assets/u-topia-wallet.png.asset.json";
 import stakeholderGathering from "@/assets/stakeholder-gathering.jpg.asset.json";
+import youEvent from "@/assets/you-event.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -78,8 +79,8 @@ const ECOSYSTEM = [
     title: "YOU",
     body: "A member, a voter, an owner — not a customer to extract value from.",
     icon: Users,
-    image: peopleLearn,
-    alt: "A member learning on a tablet by a sunlit window",
+    image: youEvent.url,
+    alt: "Community members at a U-TOPIA event presentation",
   },
 ];
 
