@@ -53,6 +53,8 @@ const ECOSYSTEM = [
     title: "U-TOPIA",
     body: "The family of companies built on one belief: business should serve everyone it touches.",
     icon: Waves,
+    image: peopleRules,
+    alt: "Two colleagues shaking hands in a bright office",
   },
   {
     eyebrow: "The Learning Home",
@@ -60,12 +62,16 @@ const ECOSYSTEM = [
     body: "Governance, education, and community infrastructure. Where understanding comes first and everyone learns to shape what gets built.",
     icon: BookOpen,
     featured: true,
+    image: peopleCollab,
+    alt: "A diverse group of members collaborating around a laptop",
   },
   {
     eyebrow: "The Stakeholder",
     title: "YOU",
     body: "A member, a voter, an owner — not a customer to extract value from.",
     icon: Users,
+    image: peopleLearn,
+    alt: "A member learning on a tablet by a sunlit window",
   },
 ];
 
@@ -74,18 +80,25 @@ const DAO_CARDS = [
     title: "Open Rules",
     body: "Transparent rules, encoded and shared — no hidden terms, no closed-door changes.",
     icon: ScrollText,
+    image: peopleRules,
+    alt: "Members agreeing on shared rules",
   },
   {
     title: "Community Votes",
     body: "Decisions are made by members, not executives. One community, one voice.",
     icon: Vote,
+    image: peopleVote,
+    alt: "A community raising hands to vote in a bright hall",
   },
   {
     title: "Permanent Record",
     body: "Every transaction lives on a public ledger, so the record can be checked by anyone.",
     icon: Link2,
+    image: peopleCollab,
+    alt: "Members reviewing records together on a laptop",
   },
 ];
+
 
 const TIERS = [
   {
