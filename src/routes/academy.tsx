@@ -29,6 +29,7 @@ import youEvent from "@/assets/you-event.jpg.asset.json";
 import uCenterSpeaker from "@/assets/u-center-speaker-v2.png.asset.json";
 import daoAudience from "@/assets/dao-audience.jpg.asset.json";
 import logoDark from "@/assets/logo-dark.png.asset.json";
+import futureOfMoneyThumb from "@/assets/future-of-money-thumb.jpg.asset.json";
 
 export const Route = createFileRoute("/academy")({
   head: () => ({
@@ -117,7 +118,7 @@ const RAILS = [
   {
     title: "Upcoming Content",
     items: [
-      { title: "The Future of Money", caption: "Banking Continues to Churn", image: uTopiaWallet.url },
+      { title: "The Future of Money", caption: "Banking Continues to Churn", image: futureOfMoneyThumb.url },
       { title: "AI for Business: Build Your AI Workforce", caption: "Support Teams and Trends", image: peopleCollab },
       { title: "Build Your First AI Agent", caption: "Managing Sessions in Scale Initiatives", image: peopleRules },
     ],
