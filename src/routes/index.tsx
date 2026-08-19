@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 
-import heroAurora from "@/assets/hero-aurora.jpg";
+import heroAurora from "@/assets/hero-aurora-light.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -79,11 +79,11 @@ function Index() {
             width={1920}
             height={1088}
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 size-full object-cover opacity-70"
+            className="pointer-events-none absolute inset-0 size-full object-cover opacity-90"
           />
           <div
             aria-hidden="true"
-            className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background"
+            className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/30 to-background"
           />
 
           <div className="relative mx-auto flex max-w-5xl flex-col items-center px-6 pb-28 pt-44 text-center">
