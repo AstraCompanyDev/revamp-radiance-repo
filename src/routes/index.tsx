@@ -642,10 +642,10 @@ function Index() {
           />
           <div
             aria-hidden="true"
-            className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background"
+            className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/30 to-background/50"
           />
           <div className="relative mx-auto max-w-3xl px-6 py-28">
-            <div className="glass-panel flex flex-col items-center rounded-[2rem] border border-border px-8 py-14 text-center shadow-sm md:px-14">
+            <div className="flex flex-col items-center rounded-[2rem] border border-border bg-card/85 px-8 py-14 text-center shadow-sm backdrop-blur-xl md:px-14">
               <a
                 href="/"
                 className="rounded-full border border-border px-6 py-2 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground transition-colors hover:text-foreground"
