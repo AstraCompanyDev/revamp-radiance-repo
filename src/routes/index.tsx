@@ -60,7 +60,7 @@ const ECOSYSTEM = [
     title: "U-TOPIA",
     body: "The family of companies built on one belief: business should serve everyone it touches.",
     icon: Waves,
-    image: uTopiaWallet,
+    image: uTopiaWallet.url,
     alt: "U-TOPIA mobile wallet app showing spending balance and transactions",
   },
   {
