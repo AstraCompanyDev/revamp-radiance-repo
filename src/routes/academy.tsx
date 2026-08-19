@@ -28,6 +28,7 @@ import stakeholderGathering from "@/assets/stakeholder-gathering.jpg.asset.json"
 import youEvent from "@/assets/you-event.jpg.asset.json";
 import uCenterSpeaker from "@/assets/u-center-speaker-v2.png.asset.json";
 import daoAudience from "@/assets/dao-audience.jpg.asset.json";
+import logoDark from "@/assets/logo-dark.png.asset.json";
 
 export const Route = createFileRoute("/academy")({
   head: () => ({
@@ -170,12 +171,12 @@ function Academy() {
       <header className="sticky top-0 z-40 border-b border-border bg-card/70 backdrop-blur-xl">
         <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-4 px-4 py-3 lg:px-8">
           <Link to="/" className="flex items-center gap-2">
-            <span className="grid h-8 w-8 place-items-center rounded-xl bg-brand-gradient text-sm font-bold text-primary-foreground">
-              U
-            </span>
-            <span className="font-display text-lg font-semibold tracking-tight">
-              u.center <span className="text-xs font-medium text-muted-foreground">Beta</span>
-            </span>
+            <img
+              src={logoDark.url}
+              alt="u.center"
+              className="h-7 w-auto dark:invert"
+            />
+            <span className="text-xs font-medium text-muted-foreground">Beta</span>
           </Link>
 
           <div className="hidden flex-1 items-center md:flex">
