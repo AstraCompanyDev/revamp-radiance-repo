@@ -28,6 +28,7 @@ import stakeholderGathering from "@/assets/stakeholder-gathering.jpg.asset.json"
 import youEvent from "@/assets/you-event.jpg.asset.json";
 import uCenterSpeaker from "@/assets/u-center-speaker-v2.png.asset.json";
 import daoAudience from "@/assets/dao-audience.jpg.asset.json";
+import logoDark from "@/assets/logo-dark.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -229,10 +230,11 @@ function Index() {
       <header className="fixed inset-x-0 top-4 z-50 px-4">
         <nav className="glass-panel mx-auto flex max-w-6xl items-center justify-between rounded-full px-5 py-3">
           <a href="/" className="flex items-center gap-3">
-            <span className="bg-brand-gradient grid size-8 place-items-center rounded-full font-display text-sm font-bold text-primary-foreground">
-              u
-            </span>
-            <span className="font-display text-lg font-bold tracking-tight">u.center</span>
+            <img
+              src={logoDark.url}
+              alt="u.center"
+              className="h-7 w-auto dark:invert"
+            />
             <span className="rounded-full border border-border px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
               Beta
             </span>
