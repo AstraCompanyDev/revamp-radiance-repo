@@ -598,6 +598,16 @@ function Index() {
             </p>
           </div>
 
+          <img
+            src={peopleLearn}
+            alt="A learner smiling while studying on a tablet"
+            loading="lazy"
+            width={1200}
+            height={912}
+            className="mt-12 h-72 w-full rounded-3xl border border-border object-cover md:h-96"
+          />
+
+
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {LEARNING.map((item) => {
               const Icon = item.icon;
