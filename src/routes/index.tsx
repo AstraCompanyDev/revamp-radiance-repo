@@ -638,7 +638,7 @@ function Index() {
             width={1920}
             height={1080}
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 size-full object-cover opacity-[0.32]"
+            className="pointer-events-none absolute inset-0 size-full object-cover opacity-70"
           />
           <div
             aria-hidden="true"
