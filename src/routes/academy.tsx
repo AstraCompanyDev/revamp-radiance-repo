@@ -29,6 +29,7 @@ import youEvent from "@/assets/you-event.jpg.asset.json";
 import uCenterSpeaker from "@/assets/u-center-speaker-v2.png.asset.json";
 import daoAudience from "@/assets/dao-audience.jpg.asset.json";
 import logoDark from "@/assets/logo-dark.png.asset.json";
+import futureOfMoneyThumb from "@/assets/future-of-money-thumb.jpg.asset.json";
 
 export const Route = createFileRoute("/academy")({
   head: () => ({
