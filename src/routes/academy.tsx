@@ -32,6 +32,9 @@ import logoDark from "@/assets/logo-dark.png.asset.json";
 import futureOfMoneyThumb from "@/assets/future-of-money-thumb.jpg.asset.json";
 import aiForBusinessThumb from "@/assets/ai-for-business-thumb.jpg.asset.json";
 import buildYourFirstAIAgentThumb from "@/assets/build-your-first-ai-agent-thumb.jpg.asset.json";
+import blockchainBasicsThumb from "@/assets/blockchain-basics-thumb.png.asset.json";
+import businessWeb3Thumb from "@/assets/business-web3-thumb.png.asset.json";
+import futureInternetThumb from "@/assets/future-internet-thumb.png.asset.json";
 
 export const Route = createFileRoute("/academy")({
   head: () => ({
@@ -144,9 +147,9 @@ const RAILS = [
   {
     title: "Latest Content",
     items: [
-      { title: "Blockchain Basics", caption: "The Fundamentals Course", image: peopleLearn },
-      { title: "Business in Web 3.0", caption: "Commerce When the Rails Change", image: peopleCollab },
-      { title: "The Future of the Internet", caption: "What Ownership Really Means Online", image: peopleRules },
+      { title: "Blockchain Basics", caption: "The Fundamentals Course", image: blockchainBasicsThumb.url },
+      { title: "Business in Web 3.0", caption: "Commerce When the Rails Change", image: businessWeb3Thumb.url },
+      { title: "The Future of the Internet", caption: "What Ownership Really Means Online", image: futureInternetThumb.url },
     ],
   },
 ];
