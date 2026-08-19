@@ -17,6 +17,10 @@ import {
 } from "lucide-react";
 
 import heroAurora from "@/assets/hero-aurora-light.jpg";
+import peopleCollab from "@/assets/people-collab.jpg";
+import peopleVote from "@/assets/people-vote.jpg";
+import peopleLearn from "@/assets/people-learn.jpg";
+import peopleRules from "@/assets/people-rules.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -53,6 +57,8 @@ const ECOSYSTEM = [
     title: "U-TOPIA",
     body: "The family of companies built on one belief: business should serve everyone it touches.",
     icon: Waves,
+    image: peopleRules,
+    alt: "Two colleagues shaking hands in a bright office",
   },
   {
     eyebrow: "The Learning Home",
@@ -60,12 +66,16 @@ const ECOSYSTEM = [
     body: "Governance, education, and community infrastructure. Where understanding comes first and everyone learns to shape what gets built.",
     icon: BookOpen,
     featured: true,
+    image: peopleCollab,
+    alt: "A diverse group of members collaborating around a laptop",
   },
   {
     eyebrow: "The Stakeholder",
     title: "YOU",
     body: "A member, a voter, an owner — not a customer to extract value from.",
     icon: Users,
+    image: peopleLearn,
+    alt: "A member learning on a tablet by a sunlit window",
   },
 ];
 
@@ -74,18 +84,25 @@ const DAO_CARDS = [
     title: "Open Rules",
     body: "Transparent rules, encoded and shared — no hidden terms, no closed-door changes.",
     icon: ScrollText,
+    image: peopleRules,
+    alt: "Members agreeing on shared rules",
   },
   {
     title: "Community Votes",
     body: "Decisions are made by members, not executives. One community, one voice.",
     icon: Vote,
+    image: peopleVote,
+    alt: "A community raising hands to vote in a bright hall",
   },
   {
     title: "Permanent Record",
     body: "Every transaction lives on a public ledger, so the record can be checked by anyone.",
     icon: Link2,
+    image: peopleCollab,
+    alt: "Members reviewing records together on a laptop",
   },
 ];
+
 
 const TIERS = [
   {
@@ -322,28 +339,47 @@ function Index() {
               return (
                 <article
                   key={item.title}
-                  className={`glass-panel relative overflow-hidden rounded-3xl p-7 ${
-                    item.featured ? "md:-my-6 md:p-9" : ""
+                  className={`glass-panel relative overflow-hidden rounded-3xl ${
+                    item.featured ? "md:-my-6" : ""
                   }`}
                   style={item.featured ? { boxShadow: "var(--shadow-glow)" } : undefined}
                 >
                   {item.featured && (
                     <div
                       aria-hidden="true"
-                      className="bg-brand-gradient absolute inset-x-0 top-0 h-1"
+                      className="bg-brand-gradient absolute inset-x-0 top-0 z-10 h-1"
                     />
                   )}
-                  <span className="bg-brand-gradient grid size-10 place-items-center rounded-xl text-primary-foreground">
-                    <Icon className="size-5" />
-                  </span>
-                  <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-                    {item.eyebrow}
-                  </p>
-                  <h3 className="mt-1 font-display text-2xl font-bold tracking-tight">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+                  <div className="relative">
+                    <img
+                      src={item.image}
+                      alt={item.alt}
+                      loading="lazy"
+                      width={1200}
+                      height={912}
+                      className={`w-full object-cover ${item.featured ? "h-56" : "h-44"}`}
+                    />
+                    <div
+                      aria-hidden="true"
+                      className="absolute inset-0 bg-gradient-to-t from-card/90 via-card/10 to-transparent"
+                    />
+                  </div>
+                  <div className={`relative ${item.featured ? "p-9 pt-5" : "p-7 pt-5"}`}>
+                    <span className="bg-brand-gradient grid size-10 place-items-center rounded-xl text-primary-foreground">
+                      <Icon className="size-5" />
+                    </span>
+                    <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+                      {item.eyebrow}
+                    </p>
+                    <h3 className="mt-1 font-display text-2xl font-bold tracking-tight">
+                      {item.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                      {item.body}
+                    </p>
+                  </div>
                 </article>
+
               );
             })}
           </div>
@@ -369,18 +405,35 @@ function Index() {
                 return (
                   <article
                     key={card.title}
-                    className="glass-panel group rounded-3xl p-7 transition-transform hover:-translate-y-1"
+                    className="glass-panel group overflow-hidden rounded-3xl transition-transform hover:-translate-y-1"
                   >
-                    <span className="bg-brand-gradient grid size-11 place-items-center rounded-xl text-primary-foreground">
-                      <Icon className="size-5" />
-                    </span>
-                    <h3 className="mt-6 font-display text-xl font-bold tracking-tight">
-                      {card.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                      {card.body}
-                    </p>
+                    <div className="relative">
+                      <img
+                        src={card.image}
+                        alt={card.alt}
+                        loading="lazy"
+                        width={1200}
+                        height={912}
+                        className="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div
+                        aria-hidden="true"
+                        className="absolute inset-0 bg-gradient-to-t from-card/90 via-card/10 to-transparent"
+                      />
+                    </div>
+                    <div className="relative p-7 pt-5">
+                      <span className="bg-brand-gradient grid size-11 place-items-center rounded-xl text-primary-foreground">
+                        <Icon className="size-5" />
+                      </span>
+                      <h3 className="mt-6 font-display text-xl font-bold tracking-tight">
+                        {card.title}
+                      </h3>
+                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                        {card.body}
+                      </p>
+                    </div>
                   </article>
+
                 );
               })}
             </div>
@@ -466,6 +519,14 @@ function Index() {
 
             <div className="mt-14 grid gap-8 md:grid-cols-2 md:items-center">
               <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
+                <img
+                  src={peopleVote}
+                  alt="Community members raising their hands to vote together"
+                  loading="lazy"
+                  width={1200}
+                  height={912}
+                  className="h-64 w-full rounded-3xl border border-border object-cover"
+                />
                 <p>
                   For decades, business served only its shareholders. Stakeholder capitalism is the
                   alternative — a business responsible to everyone it affects.
@@ -476,6 +537,7 @@ function Index() {
                   transparent, community-governed, automatic.
                 </p>
               </div>
+
 
               <div className="glass-panel rounded-3xl p-8">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
@@ -535,6 +597,16 @@ function Index() {
               CENTER meets you.
             </p>
           </div>
+
+          <img
+            src={peopleLearn}
+            alt="A learner smiling while studying on a tablet"
+            loading="lazy"
+            width={1200}
+            height={912}
+            className="mt-12 h-72 w-full rounded-3xl border border-border object-cover md:h-96"
+          />
+
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {LEARNING.map((item) => {
