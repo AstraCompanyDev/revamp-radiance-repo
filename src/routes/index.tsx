@@ -401,7 +401,7 @@ function Index() {
             height={1280}
             aria-hidden="true"
             loading="lazy"
-            className="pointer-events-none absolute inset-0 size-full object-cover opacity-30"
+            className="pointer-events-none absolute inset-0 size-full object-cover opacity-55"
           />
           <div
             aria-hidden="true"
