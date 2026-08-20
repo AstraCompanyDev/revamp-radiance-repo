@@ -544,7 +544,7 @@ function Index() {
                   </p>
                 </div>
                 <ul className="grid gap-3 sm:grid-cols-2">
-                  {TIERS[3].features.map((feature) => (
+                  {TIERS[3]!.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3 text-sm">
                       <span className="bg-brand-gradient mt-0.5 grid size-4 shrink-0 place-items-center rounded-full text-[10px] font-bold text-primary-foreground">
                         <Check className="size-3" />
