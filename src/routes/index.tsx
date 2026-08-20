@@ -475,39 +475,113 @@ function Index() {
             </p>
           </div>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {TIERS.map((tier) => {
+          <div className="mt-14 grid gap-6 lg:grid-cols-12">
+            {/* Starter — Bronze — Silver */}
+            {TIERS.slice(0, 3).map((tier) => {
               const Icon = tier.icon;
               return (
                 <article
                   key={tier.name}
-                  className={`relative flex flex-col overflow-hidden rounded-3xl border bg-card ${
-                    tier.popular ? "border-primary/50" : "border-border"
-                  }`}
-                  style={tier.popular ? { boxShadow: "var(--shadow-glow)" } : undefined}
+                  className="group relative flex flex-col overflow-hidden rounded-3xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg lg:col-span-4"
                 >
-                  {tier.popular && (
-                    <span className="bg-brand-gradient absolute right-5 top-5 z-10 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-primary-foreground">
-                      Most Popular
-                    </span>
-                  )}
-                  <div className="bg-brand-gradient p-7 text-primary-foreground">
-                    <div className="flex items-center gap-3">
-                      <span className="rounded-full bg-black/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">
+                  <div className="relative h-1.5 bg-gradient-to-r from-brand via-brand-mid to-brand-end" />
+                  <div className="p-7">
+                    <div className="flex items-center justify-between">
+                      <span className="rounded-full bg-secondary px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-secondary-foreground">
                         {tier.name}
                       </span>
-                      {!tier.popular && <Icon className="size-5 opacity-90" />}
+                      <Icon className="size-5 text-muted-foreground" />
                     </div>
                     <p className="mt-6 flex items-end gap-2">
-                      <span className="font-display text-4xl font-bold tracking-tight">
+                      <span className="font-display text-4xl font-bold tracking-tight text-foreground">
                         {tier.price}
                       </span>
-                      <span className="pb-1 text-xs font-medium uppercase tracking-[0.16em] opacity-85">
+                      <span className="pb-1 text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
                         Package Price
                       </span>
                     </p>
                   </div>
-                  <ul className="flex flex-1 flex-col gap-3 p-7">
+                  <ul className="flex flex-1 flex-col gap-3 border-t border-border p-7">
+                    {tier.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-3 text-sm">
+                        <Check className="mt-0.5 size-4 shrink-0 text-primary" />
+                        <span className="text-muted-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              );
+            })}
+
+            {/* Gold — Featured */}
+            <article
+              className="relative flex flex-col overflow-hidden rounded-3xl border border-primary/40 bg-card lg:col-span-12"
+              style={{ boxShadow: "var(--shadow-glow)" }}
+            >
+              <div className="bg-brand-gradient absolute inset-x-0 top-0 h-1.5" />
+              <span className="bg-brand-gradient absolute right-6 top-6 z-10 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-primary-foreground">
+                Most Popular
+              </span>
+              <div className="grid gap-8 p-8 md:grid-cols-2 md:items-center lg:p-10">
+                <div>
+                  <div className="flex items-center gap-3">
+                    <span className="rounded-full bg-secondary px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-secondary-foreground">
+                      Gold
+                    </span>
+                    <Trophy className="size-5 text-primary" />
+                  </div>
+                  <p className="mt-5 flex items-end gap-2">
+                    <span className="font-display text-5xl font-bold tracking-tight text-foreground md:text-6xl">
+                      $500
+                    </span>
+                    <span className="pb-1 text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
+                      Package Price
+                    </span>
+                  </p>
+                  <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
+                    The best balance of access, rewards, and growth. Gold unlocks the full U Career
+                    and Academy experience with referral rewards that compound over time.
+                  </p>
+                </div>
+                <ul className="grid gap-3 sm:grid-cols-2">
+                  {TIERS[3].features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-3 text-sm">
+                      <span className="bg-brand-gradient mt-0.5 grid size-4 shrink-0 place-items-center rounded-full text-[10px] font-bold text-primary-foreground">
+                        <Check className="size-3" />
+                      </span>
+                      <span className="text-muted-foreground">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+
+            {/* Platinum — Diamond */}
+            {TIERS.slice(4).map((tier) => {
+              const Icon = tier.icon;
+              return (
+                <article
+                  key={tier.name}
+                  className="group relative flex flex-col overflow-hidden rounded-3xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg lg:col-span-6"
+                >
+                  <div className="relative h-1.5 bg-gradient-to-r from-brand via-brand-mid to-brand-end" />
+                  <div className="p-7">
+                    <div className="flex items-center justify-between">
+                      <span className="rounded-full bg-secondary px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-secondary-foreground">
+                        {tier.name}
+                      </span>
+                      <Icon className="size-5 text-muted-foreground" />
+                    </div>
+                    <p className="mt-6 flex items-end gap-2">
+                      <span className="font-display text-4xl font-bold tracking-tight text-foreground">
+                        {tier.price}
+                      </span>
+                      <span className="pb-1 text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
+                        Package Price
+                      </span>
+                    </p>
+                  </div>
+                  <ul className="flex flex-1 flex-col gap-3 border-t border-border p-7">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3 text-sm">
                         <Check className="mt-0.5 size-4 shrink-0 text-primary" />
