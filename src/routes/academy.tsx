@@ -59,7 +59,7 @@ export const Route = createFileRoute("/academy")({
 });
 
 const SIDEBAR_MAIN = [
-  { label: "Explore", icon: Compass },
+  { label: "Explore", icon: Compass, href: "/explore" },
   { label: "Dashboard", icon: LayoutDashboard },
   { label: "Purchase", icon: ShoppingBag },
   { label: "Academy", icon: GraduationCap, active: true },
@@ -212,7 +212,7 @@ function Academy() {
                 {SIDEBAR_MAIN.map((item) => (
                   <li key={item.label}>
                     <a
-                      href="#"
+                      href={"href" in item ? (item.href as string) : "#"}
                       className={`flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium transition-colors ${
                         item.active
                           ? "bg-brand-gradient text-primary-foreground"
