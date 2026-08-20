@@ -494,7 +494,13 @@ function Index() {
                       <span className="rounded-full bg-secondary px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-secondary-foreground">
                         {tier.name}
                       </span>
-                      {!tier.popular && <Icon className="size-5 text-muted-foreground" />}
+                      {tier.popular ? (
+                        <span className="bg-brand-gradient rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-primary-foreground">
+                          Most Popular
+                        </span>
+                      ) : (
+                        <Icon className="size-5 text-muted-foreground" />
+                      )}
                     </div>
                     <p className="mt-6 flex items-end gap-2">
                       <span className="font-display text-4xl font-bold tracking-tight text-foreground">
