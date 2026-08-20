@@ -484,11 +484,6 @@ function Index() {
                   className="group relative flex flex-col overflow-hidden rounded-3xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
                   <div className="relative h-1.5 bg-gradient-to-r from-brand via-brand-mid to-brand-end" />
-                  {tier.popular && (
-                    <span className="bg-brand-gradient absolute right-5 top-5 z-10 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-primary-foreground">
-                      Most Popular
-                    </span>
-                  )}
                   <div className="p-7">
                     <div className="flex items-center justify-between">
                       <span className="rounded-full bg-secondary px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-secondary-foreground">
