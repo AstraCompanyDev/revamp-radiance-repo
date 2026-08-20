@@ -51,7 +51,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const NAV_LINKS = ["Home", "Privacy & Policy", "Terms & Conditions"];
+
 
 const PILLARS = [
   { title: "Open", label: "Governance" },
@@ -236,30 +236,6 @@ function Index() {
               className="h-7 w-auto dark:invert"
             />
           </a>
-
-          <ul className="hidden items-center gap-9 md:flex">
-            {NAV_LINKS.map((link, i) => (
-              <li key={link}>
-                <a
-                  href="/"
-                  className={`text-sm font-medium transition-colors hover:text-foreground ${
-                    i === 0 ? "text-foreground" : "text-muted-foreground"
-                  }`}
-                >
-                  {link}
-                </a>
-              </li>
-            ))}
-            <li>
-              <a
-                href="/academy"
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-              >
-                Academy
-              </a>
-            </li>
-          </ul>
-
 
           <a
             href="/"
