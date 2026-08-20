@@ -237,30 +237,6 @@ function Index() {
             />
           </a>
 
-          <ul className="hidden items-center gap-9 md:flex">
-            {NAV_LINKS.map((link, i) => (
-              <li key={link}>
-                <a
-                  href="/"
-                  className={`text-sm font-medium transition-colors hover:text-foreground ${
-                    i === 0 ? "text-foreground" : "text-muted-foreground"
-                  }`}
-                >
-                  {link}
-                </a>
-              </li>
-            ))}
-            <li>
-              <a
-                href="/academy"
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-              >
-                Academy
-              </a>
-            </li>
-          </ul>
-
-
           <a
             href="/"
             className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
