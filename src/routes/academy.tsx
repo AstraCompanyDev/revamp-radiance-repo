@@ -196,12 +196,6 @@ function Academy() {
           </div>
 
           <div className="flex items-center gap-3">
-            <Link
-              to="/"
-              className="hidden text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:inline"
-            >
-              Home
-            </Link>
             <span className="rounded-full bg-brand-gradient px-4 py-2 text-sm font-semibold text-primary-foreground">
               Sign In
             </span>

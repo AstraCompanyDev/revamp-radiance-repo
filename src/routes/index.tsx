@@ -51,7 +51,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const NAV_LINKS = ["Home", "Privacy & Policy", "Terms & Conditions"];
+
 
 const PILLARS = [
   { title: "Open", label: "Governance" },
