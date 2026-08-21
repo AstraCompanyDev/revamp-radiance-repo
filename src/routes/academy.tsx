@@ -7,6 +7,7 @@ import {
   Compass,
   Download,
   FileText,
+  Gamepad2,
   GraduationCap,
   LayoutDashboard,
   LifeBuoy,

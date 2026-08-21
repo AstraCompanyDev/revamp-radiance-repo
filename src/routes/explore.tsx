@@ -4,6 +4,7 @@ import {
   BookOpen,
   Compass,
   FileText,
+  Gamepad2,
   GraduationCap,
   LayoutDashboard,
   LifeBuoy,
