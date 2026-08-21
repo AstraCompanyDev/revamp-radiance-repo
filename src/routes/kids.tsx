@@ -422,30 +422,6 @@ function Kids() {
             </div>
           </section>
 
-          {/* Featured trailer */}
-          <section className="overflow-hidden rounded-[2.5rem] border border-border bg-card/80 backdrop-blur-xl">
-            <div className="relative aspect-[16/7] w-full">
-              <img
-                src={uCenterSpeaker.url}
-                alt="Upcoming kids event preview"
-                className="h-full w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
-              <div className="absolute inset-0 grid place-items-center">
-                <button className="grid h-16 w-16 place-items-center rounded-full bg-brand-gradient text-primary-foreground shadow-lg transition-transform hover:scale-105">
-                  <Play className="h-6 w-6" />
-                </button>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                <h3 className="font-display text-2xl font-semibold tracking-tight md:text-3xl">
-                  Watch the Kids Zone Trailer
-                </h3>
-                <p className="mt-2 max-w-xl text-sm text-muted-foreground">
-                  A sneak peek at all the fun stuff heading your way.
-                </p>
-              </div>
-            </div>
-          </section>
         </main>
       </div>
     </div>
