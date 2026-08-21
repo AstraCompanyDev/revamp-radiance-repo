@@ -63,6 +63,7 @@ const SIDEBAR_MAIN = [
   { label: "Dashboard", icon: LayoutDashboard },
   { label: "Purchase", icon: ShoppingBag },
   { label: "Academy", icon: GraduationCap, active: true },
+  { label: "Kids Zone", icon: Gamepad2, href: "/kids" },
   { label: "Support", icon: LifeBuoy },
   { label: "DAO Vote", icon: Vote, badge: "New" },
 ];
