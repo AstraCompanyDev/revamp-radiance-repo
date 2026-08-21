@@ -346,6 +346,8 @@ function Kids() {
           <section className="rounded-[2.5rem] border border-border bg-gradient-to-br from-violet-50/70 to-purple-50/70 p-6 backdrop-blur-xl md:p-10">
             <div className="flex flex-col items-center text-center">
               <h2 className="font-display text-2xl font-semibold tracking-tight md:text-3xl">
+                Learn today. Be ready for tomorrow.
+                <br />
                 Fresh Lessons <span className="text-brand-gradient">Coming Soon</span>
               </h2>
               <p className="mt-2 max-w-xl text-sm text-muted-foreground">
