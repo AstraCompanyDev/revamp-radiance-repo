@@ -276,19 +276,21 @@ function Kids() {
               <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground text-pretty">
                 Discover new lessons, join fun events, and see what's coming next on U CENTER — made just for young explorers like you.
               </p>
-              <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-                <span className="inline-flex items-center gap-2 rounded-full bg-orange-100 px-4 py-2 text-sm font-semibold text-orange-600">
-                  <Rocket className="h-4 w-4" /> 4 Upcoming Events
-                </span>
-                <span className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-600">
-                  <GraduationCap className="h-4 w-4" /> 3 New Lessons
-                </span>
-                <span className="inline-flex items-center gap-2 rounded-full bg-green-100 px-4 py-2 text-sm font-semibold text-green-600">
-                  <Gift className="h-4 w-4" /> 3 Fun Activities
-                </span>
-              </div>
             </div>
           </section>
+
+          {/* Stats tabs under hero */}
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <span className="inline-flex items-center gap-2 rounded-full bg-orange-100 px-4 py-2 text-sm font-semibold text-orange-600">
+              <Rocket className="h-4 w-4" /> 4 Upcoming Events
+            </span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-600">
+              <GraduationCap className="h-4 w-4" /> 3 New Lessons
+            </span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-green-100 px-4 py-2 text-sm font-semibold text-green-600">
+              <Gift className="h-4 w-4" /> 3 Fun Activities
+            </span>
+          </div>
           {/* Featured trailer */}
           <section className="overflow-hidden rounded-[2.5rem] border border-border bg-card/80 backdrop-blur-xl">
             <div className="relative aspect-[16/7] w-full">
