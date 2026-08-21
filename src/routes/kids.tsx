@@ -1,13 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
-  Backpack,
   Calendar,
   Clock,
   Compass,
   FileText,
   Gamepad2,
-  Gift,
   GraduationCap,
   LayoutDashboard,
   LifeBuoy,
@@ -133,29 +131,6 @@ const NEW_LESSONS = [
   },
 ];
 
-const FUN_ACTIVITIES = [
-  {
-    title: "Treasure Hunt",
-    body: "Solve puzzles and find hidden U-TOPIA coins across the platform.",
-    icon: Gift,
-    color: "text-emerald-500",
-    bg: "bg-emerald-50",
-  },
-  {
-    title: "Vote on a Mascot",
-    body: "Help us pick the official U CENTER kids mascot. Your vote counts!",
-    icon: Vote,
-    color: "text-pink-500",
-    bg: "bg-pink-50",
-  },
-  {
-    title: "Build a Wallet",
-    body: "Create your own digital piggy bank and learn how money moves.",
-    icon: Backpack,
-    color: "text-cyan-500",
-    bg: "bg-cyan-50",
-  },
-];
 
 function Kids() {
   return (
@@ -287,9 +262,6 @@ function Kids() {
             <span className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-600">
               <GraduationCap className="h-4 w-4" /> 3 New Lessons
             </span>
-            <span className="inline-flex items-center gap-2 rounded-full bg-green-100 px-4 py-2 text-sm font-semibold text-green-600">
-              <Gift className="h-4 w-4" /> 3 Fun Activities
-            </span>
           </div>
           {/* Featured trailer */}
           <section className="overflow-hidden rounded-[2.5rem] border border-border bg-card/80 backdrop-blur-xl">
@@ -413,40 +385,6 @@ function Kids() {
             </div>
           </section>
 
-          {/* Fun Activities */}
-          <section>
-            <div className="flex items-end justify-between gap-4">
-              <div>
-                <h2 className="flex items-center gap-2 font-display text-xl font-semibold tracking-tight md:text-2xl">
-                  <Sparkles className="h-5 w-5 text-primary" /> Fun Activities
-                </h2>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  Play, vote, and explore while you learn.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-6 grid gap-5 md:grid-cols-3">
-              {FUN_ACTIVITIES.map((activity) => {
-                const Icon = activity.icon;
-                return (
-                  <article
-                    key={activity.title}
-                    className="flex flex-col rounded-3xl border border-border bg-card/75 p-6 backdrop-blur-xl transition-transform hover:-translate-y-1"
-                  >
-                    <span className={`grid h-12 w-12 place-items-center rounded-2xl ${activity.bg}`}>
-                      <Icon className={`h-6 w-6 ${activity.color}`} />
-                    </span>
-                    <h3 className="mt-5 font-display text-lg font-semibold">{activity.title}</h3>
-                    <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{activity.body}</p>
-                    <button className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline">
-                      Join in <ArrowRight className="h-4 w-4" />
-                    </button>
-                  </article>
-                );
-              })}
-            </div>
-          </section>
 
         </main>
       </div>
