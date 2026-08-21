@@ -5,6 +5,7 @@ import {
   Calendar,
   Clock,
   Compass,
+  FileText,
   Gamepad2,
   Gift,
   GraduationCap,
