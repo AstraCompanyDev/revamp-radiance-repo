@@ -293,7 +293,7 @@ function Kids() {
             <div className="flex items-end justify-between gap-4">
               <div>
                 <h2 className="flex items-center gap-2 font-display text-xl font-semibold tracking-tight md:text-2xl">
-                  <Calendar className="h-5 w-5 text-primary" /> Coming Up Next
+                  <Calendar className="h-5 w-5 text-primary" /> Coming Soon
                 </h2>
                 <p className="mt-1 text-sm text-muted-foreground">
                   Mark your calendar — these events are on the way.
